@@ -1,0 +1,613 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    clear: both;
+}
+
+
+/* header */
+
+header div h1 {
+    float: left;
+    width: 250px;
+}
+
+header div h1 img {
+    width: 100%;
+}
+
+header div ul.h_top {
+    float: right;
+    margin-top: 30px;
+}
+
+header div ul.h_top li {
+    float: left;
+}
+
+header div ul.h_top li div {
+    width: 20px;
+    margin: 20px;
+}
+
+header div ul.h_top li div img {
+    width: 100%;
+}
+
+header nav {
+    background-color: #ffcf02;
+    text-align: center;
+}
+
+header nav div ul.menu {
+    float: left;
+}
+
+header nav div ul.menu>li {
+    float: left;
+    padding: 0px 36px;
+    cursor: pointer;
+    line-height: 40px;
+    position: relative;
+}
+
+header nav div ul.menu>li:last-child {
+    padding: 0px 45px;
+}
+
+header nav div ul.menu>li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+header div img {
+    width: 100%;
+}
+
+/* header nav hover */
+
+header nav div ul.menu>li:hover {
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul li .sub {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: normal;
+}
+
+header nav ul li .sub li a {
+    display: block;
+    width: 120px;
+    line-height: 38px;
+    background-color: #f4981b;
+    color: #fff;
+}
+
+header nav div ul.menu>li:hover .sub {
+    display: block;
+}
+
+header nav ul li .sub li a:hover {
+    color: #f4981b;
+    background-color: #fff;
+}
+
+header nav ul li .sub .s_sub {
+    display: none;
+    z-index: 1;
+}
+
+header nav ul li .sub .s_sub li a {
+    display: block;
+    left: 38px;
+    background-color: #ffc476;
+    color: #333;
+}
+
+header nav div ul.menu>li .sub .a:hover .s_sub,
+header nav div ul.menu>li .sub .b:hover .s_sub,
+header nav div ul.menu>li .sub .c:hover .s_sub,
+header nav div ul.menu>li .sub .d:hover .s_sub,
+header nav div ul.menu>li .sub .e:hover .s_sub,
+header nav div ul.menu>li .sub .f:hover .s_sub,
+header nav div ul.menu>li .sub .g:hover .s_sub {
+    display: block;
+}
+
+header nav ul li .sub .s_sub li a:hover {
+    background-color: #fff;
+    color: #f4981b;
+}
+
+/* tab */
+
+header .tab {
+    position: relative;
+    overflow: hidden;
+
+}
+
+header .tab input {
+    display: none;
+}
+
+header .tab .page {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+header .tab .page label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    display: inline-block;
+    opacity: 30%;
+    cursor: pointer;
+}
+
+header .tab input[id=tab1]:checked~.page label[for=tab1],
+header .tab input[id=tab2]:checked~.page label[for=tab2],
+header .tab input[id=tab3]:checked~.page label[for=tab3],
+header .tab input[id=tab4]:checked~.page label[for=tab4] {
+    opacity: 80%;
+}
+
+header .tab .img {
+    position: relative;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+header .tab .img div {
+    float: left;
+    width: calc(100% / 3);
+}
+
+header .tab input[id=tab1]:checked~.img {
+    left: 0;
+}
+
+header .tab input[id=tab2]:checked~.img {
+    left: -100%;
+}
+
+header .tab input[id=tab3]:checked~.img {
+    left: -200%;
+}
+
+/* arr */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+header .tab .arrow .left_arr {
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #303031;
+    border-left: 2px solid #303031;
+    display: block;
+    position: absolute;
+    left: 10px;
+    transform: translateY(-50%) rotate(-45deg);
+    cursor: pointer;
+}
+
+
+header .tab .arrow .right_arr {
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #303031;
+    border-right: 2px solid #303031;
+    display: block;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    cursor: pointer;
+}
+
+.arrow .control {
+    display: none;
+}
+
+header .tab input[id=tab1]:checked~.arrow .control1,
+header .tab input[id=tab2]:checked~.arrow .control2,
+header .tab input[id=tab3]:checked~.arrow .control3 {
+    display: block;
+}
+
+
+
+/* section */
+
+.section1 {
+    margin-top: 60px;
+}
+
+section div h2 {
+    margin: 0px 0px 10px 5px;
+}
+
+section div ul {
+    float: left;
+    margin-bottom: 20px;
+}
+
+section div ul li {
+    float: left;
+    width: calc((100% - 60px) / 4);
+    height: 350px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+section div ul li:last-child {
+    margin-right: 0;
+}
+
+section div ul li div.bor {
+    width: 100%;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    height: 280px;
+    padding: 0;
+}
+
+section div ul li div {
+    height: 260px;
+    overflow: hidden;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+section div ul li div a {
+    display: block;
+}
+
+section div ul li div img {
+    width: 100%;
+}
+
+section div ul li p.product {
+    height: 30px;
+    padding: 15px 5px;
+}
+
+section div ul li p.price {
+    padding: 0px 5px;
+}
+
+section div ul li p.price s {
+    color: #777;
+    font-size: 14px;
+}
+
+section div h4 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section div h4 span {
+    border-bottom: 2px solid #ffcf02;
+    padding: 2px 15px;
+    transition: all 0.3s linear;
+}
+
+section div h4 span img {
+    width: 15px;
+    padding-left: 5px;
+}
+
+/* section hover */
+
+section div.bor a div {
+    position: relative;
+
+}
+
+section div.bor .ho_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    opacity: 0;
+
+}
+
+section div.bor p.po {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #fff;
+}
+
+section div.bor:hover .ho_bg {
+    opacity: 50%;
+}
+
+section div.bor:hover p.po {
+    opacity: 100%;
+}
+
+section h4:hover span {
+    border-bottom: 2px solid #f4981b;
+}
+
+
+/* section3 */
+
+.section3 div img.mid {
+    width: 100%;
+    margin: 50px 0px;
+}
+
+/* section5 */
+
+.section5 {
+    overflow: hidden;
+    /* background-color: #ffedf7; */
+    margin-bottom: 50px;
+}
+
+.section5 div.po {
+    width: 100%;
+    margin: 50px 0px;
+    height: 500px;
+    padding: 50px;
+    background-color: #ffedf7;
+    height: 400px;
+}
+
+
+.section5 .po .inner {
+    position: relative;
+}
+
+.section5 .po .po_img {
+    float: left;
+    width: 500px;
+    background-color: #ffccc7;
+}
+
+.section5 .po_img img {
+    width: 90%;
+    margin: 25px;
+    margin-bottom: 0;
+}
+
+.section5 .po .po_img p {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.section5 .po .po_txt {
+    width: 650px;
+    line-height: 35px;
+    float: right;
+    margin-right: 30px;
+}
+
+.section5 .po .po_txt h2 {
+    padding: 15px 0px;
+    font-size: 38px;
+
+}
+
+.section5 .po .po_txt h2 img {
+    position: relative;
+    top: -30px;
+}
+
+.section5 .po .po_txt h3 {
+    padding: 10px 0px;
+}
+
+.section5 .po .po_txt p {
+    font-size: 18px;
+}
+
+.section5 .po .po_txt div.h_btn {
+    float: left;
+    padding: 5px;
+    margin: 15px 80px 0px 0px;
+}
+
+/* section5 :hover */
+
+.section5 .po_txt .h_btn:hover {
+    font-weight: bold;
+}
+
+/* footer */
+
+footer div.f_top {
+    background-color: #e1e1e1;
+    color: #333;
+    height: 70px;
+}
+
+footer div.f_top_l ul {
+    float: left;
+}
+
+footer div.f_top_l ul li {
+    float: left;
+    margin: 20px;
+    padding: 5px 0px;
+}
+
+footer div.f_top_l ul li:first-child {
+    margin-left: 0;
+}
+
+footer div.f_top_r ul {
+    float: right;
+}
+
+footer div.f_top_r ul li {
+    float: left;
+    margin: 20px;
+    padding: 5px 0px;
+}
+
+footer div.f_top_r ul li div {
+    width: 50px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0;
+    transform: translateY(-25%);
+}
+
+footer div.f_top_r ul li div img {
+    width: 100%;
+}
+
+footer div.f_bottom {
+    background-color: #f4f4f4;
+    height: 230px;
+    padding: 20px;
+    color: #333;
+}
+
+footer div.f_bottom div.f_bottom_l {
+    float: left;
+    margin-right: 20px;
+}
+
+footer div.f_bottom div.f_bottom_l p.copy {
+    line-height: 60px;
+}
+
+footer div.f_bottom p {
+    line-height: 30px;
+}
+
+footer div.f_bottom p.btn a {
+    background-color: #d1d1d1;
+    height: 30px;
+    float: left;
+    left: 30px;
+    padding: 5px 15px;
+    margin: 10px 0px;
+}
+
+footer .mark {
+    float: right;
+}
+
+/* footer hover */
+
+footer .f_top_r div:hover {
+    background-color: #fff;
+}
+
+/* top */
+
+.top a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #ffcf02;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* popup */
+
+input[id=pop] {
+    display: none;
+}
+
+.popup {
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100000;
+}
+
+.popup h1 {
+    margin: 30px;
+}
+
+.popup p {
+    font-size: 20px;
+    margin: 40px 0px;
+}
+
+.x {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: #ffcf02;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    line-height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+}
+
+input[id=pop]:checked~.popup,
+input[id=pop]:checked~.bg {
+    display: none;
+}
+
